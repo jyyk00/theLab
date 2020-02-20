@@ -19,7 +19,7 @@
       "database": "database_production",
       "host": "127.0.0.1",
       "dialect": "mysql",
-      "use_env_variable": "HEROKU_CONFIG"
+      //"use_env_variable": "HEROKU_CONFIG"
     }
   }
   //does the "production" portion work this way?
