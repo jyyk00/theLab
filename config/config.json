@@ -1,6 +1,5 @@
 {
     "development": {
-      "use_env_variable": "MYSQL_CONFIG",
       "username": "root",
       "password": null,
       "database": "theLab_db",
