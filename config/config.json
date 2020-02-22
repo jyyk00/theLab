@@ -16,7 +16,8 @@
       "operatorsAliases": false
     },
     "production": {
-      "use_env_variable": "HEROKU_CONFIG"
+      "use_env_variable": "JAWSDB_URL",
+      "dialect":"mysql"
     }
   }
   
