@@ -1,10 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
     const Idea = sequelize.define("Idea", {
-      name: {
+      Idea: {
         type: DataTypes.STRING,
         allowNull: false
       },
-      api_id: {
+      ID: {
         type: DataTypes.STRING,
         allowNull: false
       }
