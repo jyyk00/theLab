@@ -20,8 +20,19 @@ app.use(
   app.use(passport.session());
 
   //handlebars goes here 
-
+  app.engine(
+    "handlebars",
+    exphbs({
+      defaultLayout: "main",
+      layoutsDir: __dirname + "/views/layouts/",
+      partialsDir: __dirname + "/views/partials/"
+    })
+  );
+  app.set("view engine", "handlebars");
   //routes go here
+
+  require("./routes/html-routes.js")(app);
+  require("./routes/api-routes.js")(app);
 
   db.sequelize.sync({ force: true }).then(function() {
     app.listen(PORT, function() {
