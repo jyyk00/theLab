@@ -14,7 +14,7 @@ CREATE TABLE Ideas (
     User_ID integer NOT NULL, 
     User_EMAIL VARCHAR (50),
     NAME VARCHAR (20) NOT NULL,
-    CONTENT VARCHAR (500), 
+    Idea VARCHAR (500), 
     PRIMARY KEY (id),
     FOEIGN KEY (User_ID) REFERENCES User(ID) 
 
