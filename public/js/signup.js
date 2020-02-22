@@ -13,3 +13,26 @@ $(document).ready(function() {
     if (!userData.email || !userData.password) {
       return;
     }
+    signUpUser(userData.email, userData.password);
+    emailInput.val("");
+    passwordInput.val("");
+  });
+
+  function signUpUser(email, password) {
+    $.post("/api/signup", {
+      email: email,
+      password: password
+    })
+      .then(function(data) {
+        window.location.replace("/");
+
+    })
+    .catch(handleLoginErr);
+}
+function handleLoginErr(err) {
+    const logInBtn = $("<a href=/login>").text("click here to login");
+    $("#alert .msg").text("email exists! ");
+    $("#alert").append(logInBtn);
+    $("#alert").fadeIn(500);
+  }
+});
